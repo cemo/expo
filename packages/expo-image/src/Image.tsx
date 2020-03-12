@@ -13,6 +13,8 @@ export interface ImageProps extends AccessibilityProps {
   style?: StyleProp<ImageStyle>;
 }
 
-export default function Image(props: ImageProps) {
-  return <ExpoImage {...props} />;
+export default class Image extends React.Component<ImageProps> {
+  render() {
+    return <ExpoImage {...this.props} />;
+  }
 }
